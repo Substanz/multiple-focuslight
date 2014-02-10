@@ -1,0 +1,11 @@
+---
+- name: is start up focuslight with port 9300?
+  command: lsof -i:9300 
+  register: is_running_focuslight_04
+  ignore_errors: True
+  tags: focuslight
+
+- name: docker run focuslight to port 9300.
+  command: docker run -p 9300:80 -v /var/focuslight/4/:/root/focuslight/data -d futoase/docker-focuslight 
+  when: is_running_focuslight_04|failed
+  notify: restart nginx

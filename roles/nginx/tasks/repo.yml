@@ -1,0 +1,4 @@
+---
+- name: upload file of nginx.repo
+  template: src=nginx.repo dest=/etc/yum.repos.d/nginx.repo
+  tags: nginx

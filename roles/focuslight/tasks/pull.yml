@@ -1,0 +1,4 @@
+---
+- name: pull from docker index
+  command: docker pull futoase/docker-focuslight
+  tags: focuslight

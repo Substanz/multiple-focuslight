@@ -1,0 +1,9 @@
+---
+- name: setting of nginx
+  template: src=nginx.conf dest=/etc/nginx/conf.d/focuslight.conf
+  tags: focuslight
+
+- name: restart nginx
+  service: name=nginx state=restarted
+  tags: focuslight
+

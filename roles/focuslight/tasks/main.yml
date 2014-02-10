@@ -1,0 +1,9 @@
+---
+- include: pull.yml
+- include: mkdir.yml
+- include: run01.yml
+- include: run02.yml
+- include: run03.yml
+- include: run04.yml
+- include: run05.yml
+- include: setting-of-nginx.yml

@@ -1,0 +1,4 @@
+---
+- name: install lsof
+  yum: name=lsof enablerepo=epel state=present
+  tags: lsof

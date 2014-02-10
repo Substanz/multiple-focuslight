@@ -1,0 +1,4 @@
+---
+- name: instlal libselinux-python
+  yum: name=libselinux-python enablerepo=epel state=present
+  tags: libselinux-python

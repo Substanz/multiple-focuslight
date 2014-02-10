@@ -1,0 +1,4 @@
+---
+- name: install docker
+  yum: name=docker-io enablerepo=epel state=present
+  tags: docker

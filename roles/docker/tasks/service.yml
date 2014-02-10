@@ -1,0 +1,5 @@
+---
+- name: start of service with docker
+  service: name=docker state=running enabled=yes
+  register: docker_installed
+  tags: docker

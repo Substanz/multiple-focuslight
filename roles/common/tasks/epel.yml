@@ -1,0 +1,8 @@
+---
+- name: setup epel repository
+  yum: name=http://ftp.riken.jp/Linux/fedora/epel/RPM-GPG-KEY-EPEL-6 state=present
+  tags: epel
+
+- name: install epel package 
+  yum: name=http://ftp-srv2.kddilabs.jp/Linux/distributions/fedora/epel/6/x86_64/epel-release-6-8.noarch.rpm state=present
+  tags: epel

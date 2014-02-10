@@ -1,0 +1,4 @@
+---
+- name: restart nginx
+  command: service nginx restart
+  tags: focuslight

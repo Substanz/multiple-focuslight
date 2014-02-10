@@ -1,0 +1,11 @@
+---
+- name: is start up focuslight with port 9000?
+  command: lsof -i:9000 
+  register: is_running_focuslight_01
+  ignore_errors: True
+  tags: focuslight
+
+- name: docker run focuslight to port 9000.
+  command: docker run -p 9000:80 -v /var/focuslight/1/:/root/focuslight/data -d futoase/docker-focuslight 
+  when: is_running_focuslight_01|failed
+  notify: restart nginx

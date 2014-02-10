@@ -1,0 +1,12 @@
+---
+- name: mkdir mount dir
+  command: "{{item}}"
+  with_items:
+    - mkdir -p /var/focuslight/1/
+    - mkdir -p /var/focuslight/2/
+    - mkdir -p /var/focuslight/3/
+    - mkdir -p /var/focuslight/4/
+    - mkdir -p /var/focuslight/5/
+  tags: focuslight
+
+

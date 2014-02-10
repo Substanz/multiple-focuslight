@@ -1,0 +1,4 @@
+---
+- name: install nginx
+  yum: name=nginx enablerepo=nginx state=present
+  tags: nginx
